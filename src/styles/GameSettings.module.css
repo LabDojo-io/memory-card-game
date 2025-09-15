@@ -1,0 +1,199 @@
+.gameSettings {
+  background: white;
+  border-radius: 16px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  width: 100%;
+  max-width: none;
+}
+
+.settingsHeader {
+  display: none;
+}
+
+.settingsIcon {
+  color: #4a5568;
+}
+
+.settingsHeader h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.settingsContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.boardSizeSelector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.selectorLabel {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.sizeOptions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.sizeOption {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f7fafc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  min-width: 70px;
+}
+
+.sizeOption:hover:not(:disabled) {
+  border-color: #cbd5e0;
+  background: #edf2f7;
+}
+
+.sizeOption.active {
+  border-color: #4c51bf;
+  background: #ebf4ff;
+}
+
+.sizeOption:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sizeLabel {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.difficultyLabel {
+  font-size: 0.75rem;
+  color: #718096;
+  margin-top: 2px;
+}
+
+.gameActions {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.newGameButton {
+  background: linear-gradient(135deg, #4c51bf 0%, #667eea 100%);
+  color: white;
+}
+
+.newGameButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(76, 81, 191, 0.4);
+}
+
+.resetButton {
+  background: #fed7d7;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.resetButton:hover {
+  background: #fbb6ce;
+  border-color: #f687b3;
+}
+
+.gameStats {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 8px 16px;
+  background: #f7fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.statValue {
+  font-size: 0.9rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gameSettings {
+    max-width: none;
+    width: 100%;
+  }
+  
+  .sizeOptions {
+    flex-direction: row;
+    gap: 6px;
+  }
+  
+  .sizeOption {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+  }
+  
+  .sizeLabel {
+    font-size: 0.8rem;
+  }
+  
+  .difficultyLabel {
+    font-size: 0.7rem;
+  }
+  
+  .gameActions {
+    flex-direction: row;
+    gap: 8px;
+  }
+  
+  .actionButton {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}

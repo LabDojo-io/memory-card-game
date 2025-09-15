@@ -1,0 +1,97 @@
+.gameBoard {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  gap: 16px;
+  padding: 24px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Board size specific styles */
+.gameBoard[data-board-size="20"] {
+  /* No max-width constraint */
+}
+
+.gameBoard[data-board-size="30"] {
+  /* No max-width constraint */
+}
+
+.gameBoard[data-board-size="50"] {
+  gap: 12px;
+}
+
+.gameBoard[data-board-size="100"] {
+  gap: 8px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .gameBoard {
+    padding: 16px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gameBoard {
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .gameBoard[data-board-size="20"] {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  
+  .gameBoard[data-board-size="30"] {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  
+  .gameBoard[data-board-size="50"] {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 6px;
+  }
+  
+  .gameBoard[data-board-size="100"] {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    gap: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameBoard {
+    padding: 8px;
+    gap: 6px;
+  }
+  
+  .gameBoard[data-board-size="20"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .gameBoard[data-board-size="30"] {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .gameBoard[data-board-size="50"] {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+  
+  .gameBoard[data-board-size="100"] {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 3px;
+  }
+}
+
+/* Animation for board changes */
+.gameBoard {
+  transition: all 0.3s ease-in-out;
+}

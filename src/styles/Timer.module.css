@@ -1,0 +1,78 @@
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timer.running {
+  border-color: #48bb78;
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.2);
+}
+
+.clockIcon {
+  color: #4a5568;
+  transition: color 0.3s ease;
+}
+
+.timer.running .clockIcon {
+  color: #48bb78;
+}
+
+.timeDisplay {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2d3748;
+  min-width: 60px;
+  text-align: center;
+}
+
+.pulseIndicator {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  background: #48bb78;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .timer {
+    padding: 8px 16px;
+  }
+  
+  .timeDisplay {
+    font-size: 1rem;
+    min-width: 50px;
+  }
+  
+  .clockIcon {
+    width: 16px;
+    height: 16px;
+  }
+}
