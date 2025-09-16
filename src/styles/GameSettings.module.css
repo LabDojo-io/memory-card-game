@@ -27,8 +27,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 32px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .boardSizeSelector {
@@ -161,21 +163,40 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .settingsContent {
+    gap: 24px;
+  }
+}
+
 @media (max-width: 768px) {
   .gameSettings {
     max-width: none;
     width: 100%;
+    padding: 12px 16px;
+  }
+  
+  .settingsContent {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .boardSizeSelector {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
   }
   
   .sizeOptions {
-    flex-direction: row;
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
   }
   
   .sizeOption {
-    flex: 1;
-    text-align: center;
-    padding: 8px 12px;
+    padding: 10px 8px;
+    min-width: auto;
   }
   
   .sizeLabel {
@@ -183,7 +204,7 @@
   }
   
   .difficultyLabel {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
   
   .gameActions {
@@ -193,7 +214,86 @@
   
   .actionButton {
     flex: 1;
-    padding: 10px 16px;
+    padding: 12px 16px;
     font-size: 0.85rem;
+  }
+  
+  .gameStats {
+    gap: 16px;
+    padding: 8px 12px;
+  }
+  
+  .statLabel {
+    font-size: 0.8rem;
+  }
+  
+  .statValue {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameSettings {
+    padding: 10px 12px;
+  }
+  
+  .settingsContent {
+    gap: 12px;
+  }
+  
+  .boardSizeSelector {
+    gap: 8px;
+  }
+  
+  .sizeOptions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  
+  .sizeOption {
+    padding: 8px 6px;
+  }
+  
+  .sizeLabel {
+    font-size: 0.75rem;
+  }
+  
+  .difficultyLabel {
+    font-size: 0.6rem;
+  }
+  
+  .actionButton {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .gameStats {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .stat {
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .gameSettings {
+    padding: 8px 10px;
+  }
+  
+  .sizeLabel {
+    font-size: 0.7rem;
+  }
+  
+  .difficultyLabel {
+    font-size: 0.55rem;
+  }
+  
+  .actionButton {
+    padding: 8px 10px;
+    font-size: 0.75rem;
   }
 }

@@ -31,8 +31,27 @@
 /* Responsive breakpoints */
 @media (max-width: 1200px) {
   .gameBoard {
+    padding: 18px;
+    gap: 12px;
+  }
+  
+  .gameBoard[data-board-size="100"] {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gameBoard {
     padding: 16px;
     gap: 10px;
+  }
+  
+  .gameBoard[data-board-size="50"] {
+    gap: 8px;
+  }
+  
+  .gameBoard[data-board-size="100"] {
+    gap: 6px;
   }
 }
 
@@ -40,6 +59,7 @@
   .gameBoard {
     padding: 12px;
     gap: 8px;
+    max-width: 100%;
   }
   
   .gameBoard[data-board-size="20"] {
@@ -73,21 +93,70 @@
   
   .gameBoard[data-board-size="20"] {
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
   
   .gameBoard[data-board-size="30"] {
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
   }
   
   .gameBoard[data-board-size="50"] {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(10, 1fr);
+    gap: 4px;
   }
   
   .gameBoard[data-board-size="100"] {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(15, 1fr);
     gap: 3px;
+  }
+}
+
+@media (max-width: 360px) {
+  .gameBoard {
+    padding: 6px;
+    gap: 4px;
+  }
+  
+  .gameBoard[data-board-size="20"] {
+    gap: 4px;
+  }
+  
+  .gameBoard[data-board-size="30"] {
+    gap: 4px;
+  }
+  
+  .gameBoard[data-board-size="50"] {
+    gap: 3px;
+  }
+  
+  .gameBoard[data-board-size="100"] {
+    gap: 2px;
+  }
+}
+
+@media (max-width: 320px) {
+  .gameBoard {
+    padding: 4px;
+    gap: 3px;
+  }
+  
+  .gameBoard[data-board-size="20"] {
+    gap: 3px;
+  }
+  
+  .gameBoard[data-board-size="30"] {
+    gap: 3px;
+  }
+  
+  .gameBoard[data-board-size="50"] {
+    gap: 2px;
+  }
+  
+  .gameBoard[data-board-size="100"] {
+    gap: 1px;
   }
 }
 

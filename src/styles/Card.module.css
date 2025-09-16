@@ -86,30 +86,87 @@
 }
 
 /* Responsive sizing */
+@media (max-width: 1024px) {
+  .card {
+    height: 150px;
+  }
+  
+  .cardFront {
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .card {
     height: 120px;
   }
   
-  .cardName {
-    font-size: 0.6rem;
-  }
-  
   .cardFront {
     font-size: 1.5rem;
+  }
+  
+  .cardImage {
+    width: 92%;
+    height: 88%;
   }
 }
 
 @media (max-width: 480px) {
   .card {
-    height: 100px;
-  }
-  
-  .cardName {
-    font-size: 0.5rem;
+    height: 90px;
+    min-height: 90px;
   }
   
   .cardFront {
     font-size: 1.2rem;
+  }
+  
+  .cardImage {
+    width: 90%;
+    height: 85%;
+  }
+  
+  .cardBack {
+    padding: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    height: 75px;
+    min-height: 75px;
+  }
+  
+  .cardFront {
+    font-size: 1rem;
+  }
+  
+  .cardImage {
+    width: 88%;
+    height: 82%;
+  }
+  
+  .cardBack {
+    padding: 3px;
+  }
+}
+
+@media (max-width: 320px) {
+  .card {
+    height: 65px;
+    min-height: 65px;
+  }
+  
+  .cardFront {
+    font-size: 0.9rem;
+  }
+  
+  .cardImage {
+    width: 85%;
+    height: 80%;
+  }
+  
+  .cardBack {
+    padding: 2px;
   }
 }

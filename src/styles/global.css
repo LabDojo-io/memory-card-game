@@ -17,6 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #2d3748;
+  overflow-x: hidden;
 }
 
 #root {
@@ -85,22 +86,24 @@ body {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-  .game-info {
-    flex-direction: column;
-    gap: 16px;
-    max-width: none;
+@media (max-width: 1024px) {
+  .app {
+    padding: 16px;
+  }
+  
+  .app-title {
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 768px) {
   .app {
-    padding: 16px;
+    padding: 14px;
     gap: 16px;
   }
   
   .app-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .app-subtitle {
@@ -110,21 +113,45 @@ body {
   .game-info {
     flex-direction: column;
     gap: 12px;
+    align-items: center;
+  }
+  
+  .game-area {
+    align-items: center;
   }
 }
 
 @media (max-width: 480px) {
   .app {
-    padding: 12px;
+    padding: 10px;
     gap: 12px;
   }
   
   .app-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .app-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+  
+  .game-info {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .app {
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .app-title {
+    font-size: 1.2rem;
+  }
+  
+  .app-subtitle {
+    font-size: 0.8rem;
   }
 }
 
